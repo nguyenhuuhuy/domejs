@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+            border-radius: 20px 20px;
+            padding-left: 30px;
+            margin-left: 25%;
+            background-color: beige;
+            box-shadow: 2px 1px 1px 2px blueviolet;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sơ yếu lí lịch</h1>
+        <h3>-Thông Tin Cá nhân!-</h3>
+        <p>Họ Và Tên : <b><span id="name"></span></b></p>
+        <p>Ngày Sinh :<u><span id="year"></span></u></p>
+        <p>Giới Tính :<b><span id="ange"></span></b></p>
+        <hr>
+        <br>
+        <h3>-Trình Độ Học Vấn-</h3>
+        <p>Văn Hóa : <span id="culture"></span></p>
+        <p>Học vấn : <span id="education"></span></p>
+        <hr>
+        <br>
+        <h3>-Nghề Nghiệp-</h3>
+        <p>Công việc 1 : <span id="work_1"></span></p>
+        <p>Công Việc 2 : <span id="work_2"></span></p>
+        <p style="padding-left: 45%;"><button onclick="myfunction()">click</button></p>
+        <script>
+            function myfunction() {
+                var lastname = prompt("Ho va ten :")
+                document.getElementById("name").innerHTML = lastname;
+                var year1 = prompt("tuoi:")
+                document.getElementById("year").innerHTML = year1;
+                var ange1 = prompt("Gioi Tinh:")
+                document.getElementById("ange").innerHTML = ange1;
+                var culture1 = prompt(" Van Hoa:")
+                document.getElementById("culture").innerHTML = culture1;
+                var education = prompt(" Hoc van")
+                document.getElementById("education").innerHTML = education;
+                var work_1 = prompt("Cong Viec 1")
+                document.getElementById("work_1").innerHTML = work_1;
+                var work_2 = prompt("Cong viec 2")
+                document.getElementById("work_2").innerHTML = work_2;
+            }
+        </script>
+    </div>
+</body>
+</html>
