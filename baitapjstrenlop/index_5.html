@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      .select_conten{
+        position: absolute;
+        padding-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="vao" />
+      <div class="select_conten">
+        <select name="" id="select1">
+          <option value="x">VND</option>
+          <option value="y">USD</option>
+        </select>
+        <select name="" id="select2">
+          <option value="x">VND</option>
+          <option value="y">USD</option>
+        </select>
+      </div>
+
+      <button onclick="myfunction()">Convert</button>
+    </div>
+    <p>ket qua : <span id="kq"></span></p>
+    <script>
+      function myfunction() {
+        let dauvao = document.getElementById("vao").value;
+        let selec1 = document.getElementById("select1").value;
+        let selec2 = document.getElementById("select2").value;
+        if (selec1 == "x" && selec2 == "x") {
+          document.getElementById("kq").innerHTML = dauvao + " " + "VND";
+        } else {
+          document.getElementById("kq").innerHTML = dauvao + " " + "$";
+        }
+        if (selec1 == "x" && selec2 == "y") {
+          document.getElementById("kq").innerHTML = dauvao / 24000 + " " + "$";
+        }
+        if (selec1 == "y" && selec2 == "x") {
+          document.getElementById("kq").innerHTML =
+            dauvao * 24000 + " " + "VND";
+        }
+      }
+    </script>
+  </body>
+</html>
