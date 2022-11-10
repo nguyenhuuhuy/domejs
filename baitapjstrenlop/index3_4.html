@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Diện Tích Hình tròn</h1>
+    <p>Đường Kính hình tròn:</p>
+    <p id="R"></p>
+    <p>Diện Tích</p>
+    <p id="D"></p>
+    <p>Chu Vi </p>
+    <p id="C"></p>
+    <p><button onclick="myfunction()">Click</button></p>
+    <script>
+        function myfunction(){
+            let r=prompt("Ban Kinh:")
+            const p= 3.14;
+            r1= parseInt(r);
+            let s=r1 * r1 * p;
+            let c=2*r1*p;
+            document.getElementById("R").innerHTML=r1;
+            document.getElementById("D").innerHTML= s;
+            document.getElementById("C").innerHTML=c;
+        }
+    </script>
+</body>
+</html>
